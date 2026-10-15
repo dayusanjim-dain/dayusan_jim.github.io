@@ -1,0 +1,33 @@
+{
+    "name": "Jim Dayusan",
+    "tagline": "Aspiring Network & Tech Enthusiast",
+    "introduction": "I enjoy learning technology and building useful applications. Passionate about networks, systems, and continuous growth.",
+    "profileImage": "images/profile.jpg",
+    "about": {
+        "biography": "I'm a dedicated student at Nueva Vizcaya State University with a strong passion for technology and networking. I believe in continuous learning and building a solid foundation in IT infrastructure and systems administration.",
+        "school": "Nueva Vizcaya State University — Bambang Campus",
+        "program": "Bachelor of Science in Information Technology",
+        "graduation": "Expected Graduation: 2027",
+        "careerGoal": "Become a Network Engineer & System Administrator",
+        "interests": "Networking • Cybersecurity • Cloud Computing • Learning New Technologies"
+    },
+    "skills": [
+        "Computer Networks",
+        "Network Configuration",
+        "Web Development"
+    ],
+    "projects": [
+        {
+            "title": "Personal Portfolio",
+            "description": "A responsive personal portfolio website built with HTML, CSS, and JavaScript.",
+            "technologies": "HTML • CSS • JavaScript",
+            "link": ""
+        }
+    ],
+    "githubUsername": "yourusername",
+    "contact": {
+        "email": "dayusanjim04@gmail.com",
+        "location": "Nueva Vizcaya, Philippines",
+        "linkedin": "https://www.linkedin.com/"
+    }
+}

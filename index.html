@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Student portfolio showcasing skills, projects, and achievements.">
+   <title>Jim Dayusan's Portfolio</title>
+   <link rel="stylesheet" href="css/style.css">
+   <script src="js/script.js" defer></script>
+</head>
+<body>
+   <!-- Animated Background Overlay -->
+   <div class="bg-overlay"></div>
+   
+   <header class="site-header">
+   <nav class="navbar">
+      <a class="logo" href="#home">MyPortfolio</a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-btn">Home</a></li>
+        <li><a href="#about" class="nav-btn"> About</a></li>
+        <li><a href="#skills" class="nav-btn">Skills</a></li>
+        <li><a href="#projects" class="nav-btn">Projects</a></li>
+        <li><a href="#contact" class="nav-btn">Contact</a></li>
+      </ul>
+   </nav>
+ </header>
+ <main>
+ <section id="home" class="hero">
+ <div class="hero-content fade-in">
+ <h1> <span id="studentName">Jim Dayusan</span></h1>
+ <h2 id="tagline">Aspiring Network & Tech Enthusiast</h2>
+ <p id="introduction">I enjoy learning technology and building useful applications. Passionate about networks, systems, and continuous growth.</p>
+ <div class="hero-actions">
+ <a class="btn btn-primary" href="#projects">View My Projects</a>
+ <a class="btn btn-glow" href="#contact">Contact Me</a>
+ </div>
+ </div>
+ <div class="profile-container fade-in">
+ <img id="profileImage" src="images/profile.jpg" alt="Jim Dayusan Profile Photo">
+ </div>
+ </section>
+ 
+ <section id="about" class="section">
+ <h2 class="section-title fade-in">About Me</h2>
+ <div class="about-content fade-in">
+ <p id="biography">I'm a dedicated student at Nueva Vizcaya State University with a strong passion for technology and networking. I believe in continuous learning and building a solid foundation in IT infrastructure and systems administration.</p>
+ <div class="information-card">
+ <h3>Educational Background</h3>
+ <p id="education">Nueva Vizcaya State University — Bambang Campus</p>
+ <p id="graduation">Expected Graduation: 2027</p>
+ <h3>Career Goal</h3>
+ <p id="careerGoal">Become a Network Engineer & System Administrator</p>
+ <h3>Interests</h3>
+ <p id="interests">Networking • Cybersecurity • Cloud Computing • Learning New Technologies</p>
+ </div>
+ </div>
+ </section>
+
+ <section id="skills" class="section alternate">
+    <h2 class="section-title fade-in">My Skills</h2>
+    <p class="section-description fade-in">Building a strong foundation in technology and networking</p>
+    <div id="skillsContainer" class="skills-grid fade-in">
+      <div class="skill-card">Computer Networks</div>
+      <div class="skill-card">Network Configuration</div>
+      <div class="skill-card">Web Development</div>
+    </div>
+ </section>
+
+    <section id="projects" class="section">
+    <h2 class="section-title fade-in">My Projects</h2>
+    <p class="section-description fade-in">Projects I've worked on</p>
+    <div id="projectsContainer" class="projects-grid fade-in">
+      <div class="project-card project-card-single">
+        <div class="project-content">
+          <h3>Personal Portfolio</h3>
+          <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript.</p>
+          <span class="project-tech">HTML • CSS • JavaScript</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="github-section fade-in">
+    <h3>Latest GitHub Repositories</h3>
+    <ul id="githubRepos" class="repository-list">
+      <li><a href="#">portfolio-website</a> — My personal portfolio source code</li>
+    </ul>
+    <a id="githubProfile" href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit My GitHub →</a>
+    </div>
+    </section>
+
+    <section id="contact" class="section alternate">
+    <h2 class="section-title fade-in">Get In Touch</h2>
+    <p class="section-description fade-in">Feel free to reach out for collaboration, projects, or opportunities!</p>
+    <div class="contact-details fade-in">
+    <p>Email: <a id="contactEmail" href="mailto:dayusanjim04@gmail.com">dayusanjim04@gmail.com</a></p>
+    <p>Location: Nueva Vizcaya, Philippines</p>
+    <p><a id="linkedinLink" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+    </div>
+    <form id="contactForm" class="contact-form fade-in">
+    <label for="visitorName">Your Name</label>
+    <input type="text" id="visitorName" name="visitorName" required minlength="2" placeholder="Your full name">
+    <label for="visitorEmail">Your Email</label>
+    <input type="email" id="visitorEmail" name="visitorEmail" required placeholder="your@email.com">
+    <label for="visitorMessage">Your Message</label>
+    <textarea id="visitorMessage" name="visitorMessage" rows="5" required minlength="10" placeholder="Your message..."></textarea>
+    <button type="submit" class="btn btn-glow">Send Message</button>
+    <p id="formFeedback" role="status" aria-live="polite"></p>
+    </form>
+    </section>
+    </main>
+    
+    <footer>
+      <p id="footerText">&copy; 2026 Jim Dayusan. All rights reserved.</p>
+      <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.8;">Built with passion and code</p>
+    </footer>
+    
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑ Top</button>
+    
+    <!-- Scroll Animation Script + Electric Flame Effect -->
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      
+      // Back to top button
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.scrollY > 300);
+      });
+      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      
+      // Form feedback
+      document.getElementById('contactForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('formFeedback').textContent = 'Message sent successfully!';
+        e.target.reset();
+      });
+
+      function createElectricSparks(e) {
+          const button = e.currentTarget;
+          const rect = button.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          
+          // Create 8 electric sparks shooting outward
+          for (let i = 0; i < 8; i++) {
+              const spark = document.createElement('div');
+              spark.classList.add('electric-spark');
+              
+              const angle = (i / 8) * Math.PI * 2;
+              const distance = 25 + Math.random() * 15;
+              const endX = Math.cos(angle) * distance;
+              const endY = Math.sin(angle) * distance;
+              
+              spark.style.left = centerX + 'px';
+              spark.style.top = centerY + 'px';
+              spark.style.transform = `translate(-50%, -50%) translate(${endX}px, ${endY}px)`;
+              spark.style.animation = `sparkFade 0.5s ease-out forwards`;
+              
+              document.body.appendChild(spark);
+              
+              setTimeout(() => spark.remove(), 500);
+          }
+      }
+
+      // Attach spark effect to ALL buttons
+      document.querySelectorAll('.btn, .nav-btn, .back-to-top').forEach(btn => {
+          btn.addEventListener('click', createElectricSparks);
+          btn.addEventListener('touchstart', createElectricSparks);
+      });
+    </script>
+   </body>
+   </html>
